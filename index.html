@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App 🌤</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f4df27ac48.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container-sm">
+      <div class="wrapper border">
+        <h1><strong>Weather App</strong></h1>
+        <div class="row search">
+          <div class="col">
+            <form class="form" id="search-form">
+              <input
+                class="w-75"
+                type="text"
+                id="location-input"
+                placeholder="Enter City"
+              />
+              <input
+                type="submit"
+                value="Search"
+                class="btn btn-info btn-search"
+              />
+              <button
+                type="button"
+                class="btn btn-success"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </form>
+          </div>
+          <div class="col">
+            <div id="long-date" class="date">Monday, April 17</div>
+          </div>
+        </div>
+        <div class="row border today-temp">
+          <div class="col">
+            <div class="geolocation">
+              <i
+                class="fa-solid fa-location-dot me-2"
+                style="color: #000000"
+              ></i
+              ><span id="city"><strong>Amsterdam</strong></span>
+            </div>
+            <div id="date" class="day">Monday</div>
+            <div class="main-temperature">
+              <span id="actual-temperature">17</span>
+              <span class="degrees">ºC</span>
+            </div>
+            <div class="temp-min-max">
+              MAX <span id="temp-max"> 9</span>°C / MIN
+              <span id="temp-min">0</span>°C
+            </div>
+            <div class="meta-info">
+              <div class="humidity">
+                <i class="fa-solid fa-droplet" style="color: #000000"></i
+                ><br /><span id="humidity" class="percentage">20</span>%
+              </div>
+              <div class="wind">
+                <i class="fa-sharp fa-solid fa-wind" style="color: #000000"></i
+                ><br /><span class="velocity" id="wind">30</span>KM/H
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <img class="image-1" src="images/cloudy.png" alt="" />
+            <span class="image-description" id="main-description"
+              >Partly Cloudy</span
+            >
+          </div>
+        </div>
+        <div class="row week-temp">
+          <div class="col">
+            <img class="image-2" src="images/cloudy.png" alt="" />
+            <div class="week-day-1 fw-bold">Tuesday</div>
+            <span class="week-temperature-1">03°C</span>
+          </div>
+          <div class="col">
+            <img class="image-2" src="images/sun.png" alt="" />
+            <div class="week-day-2 fw-bold">Tuesday</div>
+            <span class="week-temperature-2">04°C</span>
+          </div>
+          <div class="col">
+            <img class="image-2" src="images/clouds.png" alt="" />
+            <div class="week-day-3 fw-bold">Thursday</div>
+            <span class="week-temperature-3">10°C</span>
+          </div>
+          <div class="col">
+            <img class="image-2" src="images/sun.png" alt="" />
+            <div class="week-day-4 fw-bold">Friday</div>
+            <span class="week-temperature-4">10°C</span>
+          </div>
+          <div class="col">
+            <img class="image-2" src="images/rain.png" alt="" />
+            <div class="week-day-5 fw-bold">Saturday</div>
+            <span class="week-temperature-5">04°C</span>
+          </div>
+          <div class="col">
+            <img class="image-2" src="images/cloudy.png" alt="" />
+            <div class="week-day-6 fw-bold">Sunday</div>
+            <span class="week-temperature-6">03°C</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

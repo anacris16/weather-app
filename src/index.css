@@ -1,0 +1,138 @@
+h1 {
+    text-align: center;
+    color: aliceblue;
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 20px;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    background-image: url('../images/iccup-xNtwmcRP-gw-unsplash.jpg');
+    font-family: 'Nanum Gothic Coding', monospace;
+}
+
+.search {
+    margin-bottom: 30px;
+    margin-top: 20px;
+
+}
+
+.form {
+    display: flex;
+}
+
+.btn-search {
+    background-color: #2372FA;
+    color: white;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.btn-search:hover {
+    background: white;
+    color: #24527a;
+    cursor: pointer;
+}
+
+.btn-success {
+    background-color: #00b7c2;
+    color: white;
+}
+
+.btn-success:hover {
+    background: white;
+    color: #00b7c2;
+    cursor: pointer;
+}
+
+.date {
+    text-align: right;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.today-temp {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    padding: 40px 60px;
+    line-height: 1.1;
+
+}
+
+.geolocation {
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.day {
+    font-size: 25px;
+    font-weight: bold;
+    color: #24527a;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 20px
+}
+
+.main-temperature {
+    display: block;
+    font-size: 120px;
+    font-weight: bold;
+    color: #24527a;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.degrees {
+    font-size: 28px;
+    position: absolute;
+    padding-top: 30px;
+
+}
+
+.temp-min-max {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.wind {
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+}
+
+.humidity {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.week-temp {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 22px;
+}
+
+.image-1 {
+    width: 100%;
+    height: auto;
+}
+
+.image-description {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.image-2 {
+    width: 100%;
+    height: auto;
+
+}
