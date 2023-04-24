@@ -6,12 +6,47 @@ h1 {
     padding-bottom: 20px;
 }
 
+.fa-location-dot {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.city {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.temperature {
+    align-items: center;
+}
+
+.main-temp {
+    font-weight: bold;
+    font-size: 70px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.units {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 8px;
+    margin-bottom: 29px;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 .wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 50px;
+    max-width: 600px;
+    margin: 30px auto;
     background-image: url('../images/iccup-xNtwmcRP-gw-unsplash.jpg');
-    font-family: 'Nanum Gothic Coding', monospace;
+    padding: 40px;
+    min-width: 600px;
 }
 
 .search {
@@ -37,106 +72,86 @@ h1 {
     cursor: pointer;
 }
 
-.btn-success {
-    background-color: #00b7c2;
-    color: white;
-}
-
-.btn-success:hover {
-    background: white;
-    color: #00b7c2;
-    cursor: pointer;
-}
-
 .date {
     text-align: right;
     color: white;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 18px;
 }
 
-.today-temp {
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-    padding: 40px 60px;
-    line-height: 1.1;
-
+.main-info {
+    padding-top: 5px;
+    padding-bottom: 22px;
 }
 
-.geolocation {
-    font-size: 30px;
-    font-weight: lighter;
-}
-
-.day {
-    font-size: 25px;
-    font-weight: bold;
-    color: #24527a;
+.overview {
+    font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
-    padding-top: 20px
-}
-
-.main-temperature {
     display: block;
-    font-size: 120px;
-    font-weight: bold;
     color: #24527a;
-    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
 }
 
-.degrees {
-    font-size: 28px;
-    position: absolute;
-    padding-top: 30px;
+.weather-details {
+    margin-top: 10px;
+}
+
+.current-icon {
+    width: 40%;
+    height: auto;
 
 }
 
-.temp-min-max {
-    margin-bottom: 20px;
-    font-size: 20px;
-}
-
-.wind {
-    display: inline-block;
-    font-size: 20px;
-    text-align: center;
-}
-
-.humidity {
-    display: inline-block;
-    margin-right: 20px;
-    font-size: 20px;
-    text-align: center;
-}
-
-.week-temp {
+.daily-temp {
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-    text-align: center;
-    padding: 22px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    font-family: 'Nanum Gothic Coding', monospace;
 }
 
-.image-1 {
+.celsius-link {
+    text-decoration: none;
+}
+
+.celsius-link.active {
+    color: black;
+    cursor: default;
+}
+
+.fahrenheit-link {
+    text-decoration: none;
+}
+
+.fahrenheit-link.active {
+    color: black;
+    cursor: default;
+}
+
+.conditions {
+    text-align: center;
+    margin-left: 60px;
+    text-transform: capitalize;
+
+
+}
+
+.weather-week {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: 'Nanum Gothic Coding', monospace;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+}
+
+.weekly-icon {
     width: 100%;
     height: auto;
 }
 
-.image-description {
-    display: block;
+.github-link {
     text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.image-2 {
-    width: 100%;
-    height: auto;
-
-}
-.githubLink{
-    text-align: center;
-    margin-top:10px;
 }
