@@ -65,6 +65,10 @@
               </ul>
             </div>
             <ul class="weather-details">
+              <li class="feel-like" style="color: #000000">
+                <i class="fa-solid fa-shirt" style="color: #000000"></i>
+                Feels Like: <span id="feels-like"></span>°C
+              </li>
               <li>
                 <i class="fa-solid fa-droplet" style="color: #000000"></i>
                 Humidity: <span id="humidity"></span>%
@@ -96,8 +100,7 @@
             <span class="conditions" id="condition"></span>
           </div>
         </div>
-        <div class="weather-week" id="forecast">
-        </div>
+        <div class="weather-week row" id="forecast"></div>
       </div>
     </div>
     <script src="src/index.js"></script>

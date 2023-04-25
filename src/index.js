@@ -43,30 +43,44 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = "";
 
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-2">
-  <img
-  class="weekly-icon"
-  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
-  alt=""
-  />
-  <div class="week-date">${day}</div>
-  <div class="week-temp">
-  <span class="week-temp-max">9°</span>
-  <span class="week-temp-min">6°</span>
-  </div>
-  </div>`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-2">
+      <img
+      class="weekly-icon"
+      src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+        forecastDay.condition.icon
+      }.png"
+      alt=""
+      />
+      <div class="week-date"><strong>${formatDay(
+        forecastDay.time
+      )}</strong></div>
+      <div class="week-temp">
+      <span class="week-temp-max">${Math.round(
+        forecastDay.temperature.maximum
+      )}°</span>
+        <span class="week-temp-min">${Math.round(
+          forecastDay.temperature.minimum
+        )}°</span>
+          </div>
+          </div>`;
+    }
   });
-
-  forecastHTML = forecastHTML + `</div>`;
 
   forecastElement.innerHTML = forecastHTML;
 }
@@ -82,6 +96,7 @@ function displayTemperature(response) {
   let temperatureElement = document.querySelector("#main-temp");
   let cityElement = document.querySelector("#city");
   let conditionElement = document.querySelector("#condition");
+  let feelElement = document.querySelector("#feels-like");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#currentTime");
@@ -92,6 +107,7 @@ function displayTemperature(response) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.city;
   conditionElement.innerHTML = response.data.condition.description;
+  feelElement.innerHTML = Math.round(response.data.temperature.feels_like);
   humidityElement.innerHTML = Math.round(response.data.temperature.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.time * 1000);

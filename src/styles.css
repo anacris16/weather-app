@@ -147,6 +147,16 @@ ul {
     padding-bottom: 10px;
 }
 
+.week-temp-max,.week-temp-min{
+    font-size:14px;
+    font-weight: bold;
+}
+
+.week-temp-min{
+    color:gray;
+    font-weight:lighter;
+}
+
 .weekly-icon {
     width: 100%;
     height: auto;
